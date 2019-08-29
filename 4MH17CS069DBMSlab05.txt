@@ -73,9 +73,6 @@ mysql> show databases;
 +--------------------+
 21 rows in set (0.00 sec)
 
-mysql> create database 4MH17CS069-lab05
-    -> ;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-lab05' at line 1
 mysql> create database 4MH17CS069_lab05;
 Query OK, 1 row affected (0.00 sec)
 
@@ -115,17 +112,9 @@ mysql> create table employee(ssn int primary key,
     -> addr varchar(30),
     -> sex char(1),
     -> salary int,
-    -> suoerssn int,
+    -> superssn int,
     -> dno int);\
 Query OK, 0 rows affected (0.02 sec)
-
-mysql> alter table employee suoerssn superssn int;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'suoerssn superssn int' at line 1
-mysql> alter table employee suoerssn superssn int(15);
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'suoerssn superssn int(15)' at line 1
-mysql> alter table employee change suoerssn superssn int;
-Query OK, 0 rows affected (0.01 sec)
-Records: 0  Duplicates: 0  Warnings: 0
 
 mysql> desc employee;
 +----------+-------------+------+-----+---------+-------+
